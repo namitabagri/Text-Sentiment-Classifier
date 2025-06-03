@@ -1,4 +1,4 @@
-# Binary-Text-Classification
+# Text-Classification
 This repository contains a binary text classification project trained with pretrained models on twitter sentiments dataset and then deployed using Flask and Streamlit.
 
 ## Deep Learning & NLP Project: Text Classification with Pretrained Models
