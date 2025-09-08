@@ -61,7 +61,8 @@ def predict_sentiment(text, title):
     text_vec = vectorizer.transform([cleaned_text])
 
     # Encode the title
-    title_encoded = target_encoder.transform(pd.DataFrame({'title': [title]}))
+    title_encoded = target_encoder.transform(pd.DataFrame([title]))
+    #title_encoded = target_encoder.transform(pd.DataFrame({'title': [title]}))
 
     # Combine features
     features = hstack([title_encoded, text_vec])
