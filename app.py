@@ -12,6 +12,8 @@ from scipy.sparse import hstack
 from sklearn.preprocessing import Normalizer
 from sklearn.decomposition import TruncatedSVD
 
+
+st.set_page_config(page_title="Twitter Sentiment Classifier", layout="wide")
 # [CORRECTION 1] Simplified NLTK resource download.
 # This is a more robust way to ensure the packages are present.
 nltk.download('punkt', quiet=True)
@@ -91,7 +93,7 @@ def predict_sentiment(text, title):
 
 
 # --- Streamlit UI (no changes needed here) ---
-st.set_page_config(page_title="Twitter Sentiment Classifier", layout="wide")
+
 st.title("🐦 Twitter Sentiment Classifier")
 st.write("This app predicts the sentiment of tweets about various products and companies.")
 st.markdown("---")
