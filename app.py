@@ -15,11 +15,16 @@ from sklearn.decomposition import TruncatedSVD
 
 st.set_page_config(page_title="Twitter Sentiment Classifier", layout="wide")
 # [CORRECTION 1] Simplified NLTK resource download.
-# This is a more robust way to ensure the packages are present.
+
+
+# [CORRECTION] Add all necessary NLTK resource downloads.
+# This ensures the deployment environment matches your notebook.
 nltk.download('punkt', quiet=True)
 nltk.download('stopwords', quiet=True)
 nltk.download('wordnet', quiet=True)
 nltk.download('averaged_perceptron_tagger', quiet=True)
+nltk.download('punkt_tab', quiet=True) # This was missing and caused the error
+nltk.download('averaged_perceptron_tagger_eng', quiet=True) # Also missing from notebook
 
 
 # Load models and encoders
